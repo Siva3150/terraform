@@ -9,8 +9,8 @@ resource "aws_instance" "web" {
 }
 
 resource "aws_security_group" "roboshop-all" { #this is terraform name, for terraform reference only
-    name        =  var.sg-name # this is for AWS
-    description =  var.sg-desciption
+    name        = var.sg-name # this is for AWS
+    description = var.sg-description
     #vpc_id      = aws_vpc.main.id
 
     ingress {
@@ -18,7 +18,7 @@ resource "aws_security_group" "roboshop-all" { #this is terraform name, for terr
         from_port        = var.inbound-from-port # 0 means all ports
         to_port          = 0 
         protocol         = "tcp"
-        cidr_blocks      = var.cidr-blocks
+        cidr_blocks      = var.cidr_blocks
         #ipv6_cidr_blocks = [aws_vpc.main.ipv6_cidr_block]
     }
 
