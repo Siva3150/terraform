@@ -20,7 +20,7 @@ variable "ami_id" {
 }
 
 variable "zone_id" {
-  default = "ZZ052488340AUCS35STY8"
+  default = "Z052488340AUCS35STY8"
 }
 
 variable "domain_name" {
